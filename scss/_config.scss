@@ -1,0 +1,54 @@
+/******************************** DEFINE VARIABLES **************************************/
+$main-pink: #ef7998;
+$main-yellow: rgb(249, 228, 148);
+$main-white: #fff;
+$main-black: #000;
+$main-grey: rgb(238, 238, 238);
+$yellow-trans: rgba(238, 217, 134, 0.5);
+
+/******************************** IMPORT GOOGLE FONTS ************************************/
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+
+/************************************* GLOBAL RESETS *************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/************************************ GLOBAL BODY STYLES *********************************/
+body {
+  font-family: 'Kaushan Script', cursive;
+  background: $main-white;
+  color: $main-black;
+}
+
+/*********************************** GLOBAL BUTTON STYLES ********************************/
+.btn-pink {
+  color: $main-pink !important;
+  border-color: $main-pink !important;
+
+  &:hover {
+    color: $main-black !important;
+    background: $main-pink !important;
+  }
+}
+
+.btn-black {
+  color: $main-black !important;
+  border-color: $main-black !important;
+
+  &:hover {
+    color: $main-pink !important;
+    background: $main-black !important;
+  }
+}
+
+/************************************ GLOBAL MIXINs **************************************/
+@mixin easeIn {
+  transition: all 0.5s ease-in;
+}
+
+@mixin easeIntoImage {
+  transition: all 0.5s linear;
+}
