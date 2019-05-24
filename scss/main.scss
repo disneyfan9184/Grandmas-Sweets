@@ -68,11 +68,6 @@
   color: $main-white;
   margin-top: -4rem;
 
-  .showcase-title {
-    color: $main-pink;
-    font-size: 4rem;
-  }
-
   .showcase-link {
     font-size: 1.5rem;
     color: $main-black;
@@ -109,7 +104,59 @@
   }
 }
 
-.about-title {
-  color: $main-pink;
-  font-size: 4rem;
+/************************************** STORE STYLES ************************************/
+.store {
+  background: $main-grey;
+  .search-box {
+    background: $main-pink;
+    color: $main-black;
+  }
+
+  .image-container {
+    // This will serve as a parent container for the cart icon which we will position absolute within
+    // this container.
+    position: relative;
+
+    // This will prevent the image from over flowing the container when it is zoomed in on.
+    overflow: hidden;
+    cursor: pointer;
+  }
+}
+
+.store-img {
+  @include easeInOut();
+}
+
+.image-container:hover .store-img {
+  transform: scale(1.2);
+}
+
+.single-item {
+  @include easeIn();
+
+  &:hover {
+    box-shadow: 0 10px 15px rgb(0, 0, 0);
+  }
+}
+
+.store-item-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.75rem;
+  background: $main-yellow;
+  border-top-left-radius: 1rem;
+  @include easeInOut();
+
+  // This line will shift the icon over to the right 100% and down 100% to hide it.
+  transform: translate(100%, 100%);
+
+  &:hover {
+    color: $main-white;
+    background: $main-black;
+  }
+}
+
+.image-container:hover .store-item-icon {
+  transform: translate(0, 0);
 }
