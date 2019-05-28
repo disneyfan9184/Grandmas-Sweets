@@ -47,6 +47,40 @@
   }
 }
 
+.cart {
+  position: absolute;
+  min-height: 10rem;
+  background: rgba(255, 255, 255, 0.5);
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  width: 0;
+  overflow: hidden;
+
+  .cart-item-remove {
+    color: $main-pink;
+    @include easeInOut;
+
+    &:hover {
+      transform: scale(1.1);
+      color: $main-black;
+    }
+  }
+
+  .cart-item-price {
+    font-size: 0.8rem;
+  }
+}
+
+.cart-item {
+  transition: all 2s ease-in-out;
+}
+
+.show-cart {
+  width: 18rem;
+  padding: 2rem 1.5rem;
+  transform: rotateY(-360deg);
+}
 /*********************************** SHOWCASE STYLES ************************************/
 .max-height {
   min-height: calc(100vh - 76px);
@@ -159,4 +193,48 @@
 
 .image-container:hover .store-item-icon {
   transform: translate(0, 0);
+}
+
+/************************************** SERVICES STYLES ************************************/
+.services {
+  color: $main-white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('/images/servicesBcg.jpeg') center/cover fixed no-repeat;
+
+  .service-title {
+    letter-spacing: 0.5rem;
+  }
+
+  .service-text {
+    word-spacing: 0.5rem;
+  }
+}
+
+/************************************** FOOTER STYLES ************************************/
+.footer-title {
+  background: $main-black;
+}
+
+.footer-contacts {
+  background: $main-grey;
+}
+
+.footer-icon {
+  font-size: 1.5rem;
+  color: $main-white;
+  @include easeIn;
+
+  &:hover {
+    color: $main-pink;
+  }
+}
+
+.footer-contact {
+  font-size: 1.5rem;
+  color: $main-black;
+  @include easeIn;
+
+  &:hover {
+    color: $main-pink;
+  }
 }
